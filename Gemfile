@@ -4,6 +4,7 @@ source "https://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 
 gem 'aws-sdk'
+gem 'commander'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
