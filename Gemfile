@@ -6,6 +6,7 @@ source "https://rubygems.org"
 gem 'aws-sdk'
 gem 'commander'
 gem 'settingslogic'
+gem 'terminal-announce'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
