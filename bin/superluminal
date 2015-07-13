@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'commander'
+require_relative '../lib/superluminal'
+
+Commander.configure do
+  program :name, 'Superluminal'
+  program :version, '0.1.0'
+  program :description, 'Picking up where Ansible falls down.'
+  program :help, 'Author', 'Chris Olstrom <chris@olstrom.com>'
+
+  default_command :bootstrap
+
+  command :bootstrap do |command|
+    command.syntax = 'bootstrap --project <project name>'
+    command.description = 'Sets up project-specific IAM role and S3 buckets'
+    command.option '--project STRING', String, 'Name of the project'
+    command.option '--environment STRING', String, 'Environment to create buckets for' # TODO: Make this do something.
+    command.action do |_args, options|
+      abort 'Missing parameter --project' unless options.project
+      IdentityAccessManagement.create_user "project-#{ options.project }"
+      IdentityAccessManagement.apply_policies to_user: "project-#{ options.project }", for_project: options.project
+      SimpleStorageService.create_buckets options.project, Settings.environments
+    end
+  end
+
+  command :peering do |command|
+    command.syntax = 'peering --from <vpc> --to <vpc>'
+    command.description = 'Handles VPC peering and routing'
+    command.option '--from STRING', String, 'Name of the VPC to initiate peering'
+    command.option '--to STRING', String, 'Name of VPC to peer with'
+    command.option '--region STRING', String, "AWS Region (defaults to #{ Settings.default_region })"
+    command.action do |_args, options|
+      options.default region: Settings.default_region
+      abort 'Both --from and --to are required for peering.' unless options.from && options.to
+      with_api = VirtualPrivateCloud.api options.region
+      VirtualPrivateCloud.attempt_peering from_vpc: options.from, to_vpc: options.to
+    end
+  end
+end
