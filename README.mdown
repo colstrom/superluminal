@@ -1,0 +1,21 @@
+Superluminal
+============
+
+Superluminal is a tool for managing AWS infrastructure, built on ```aws-sdk```. It is intended for use alongside Ansible.
+
+Background
+----------
+
+Ansible does a pretty good job of handling AWS, but there are cases where features either haven't been implemented yet, or are very cumbersome to manage.
+
+1. While there is a method for putting an object in an S3 Bucket, there is no method for creating a bucket.
+2. There is no method for creating an IAM role, or defining a User Policy for one.
+3. There is no method to create peering between VPCs.
+
+License
+-------
+[MIT](https://tldrlegal.com/license/mit-license)
+
+Contributors
+------------
+* [Chris Olstrom](https://colstrom.github.io/) | [e-mail](mailto:chris@olstrom.com) | [Twitter](https://twitter.com/ChrisOlstrom)
