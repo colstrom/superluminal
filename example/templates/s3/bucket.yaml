@@ -1,0 +1,13 @@
+---
+Metadata:
+  resource_suffix: ''
+Version: "2012-10-17"
+Statement:
+  - Effect: "Allow"
+    Action:
+      - "s3:ListBucket"
+      - "s3:GetBucketAcl"
+      - "s3:GetBucketVersioning"
+      - "s3:GetBucketLocation"
+      - "s3:ListBucketMultipartUploads"
+    Resource: []

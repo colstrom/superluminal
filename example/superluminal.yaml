@@ -1,0 +1,15 @@
+---
+template_path: ./templates
+default_region: us-west-2
+environments:
+  -
+    name: development
+    region: us-west-1
+  -
+    name: staging
+    region: us-west-2
+  -
+    name: production
+    region: us-east-1
+s3:
+  namespace: telusdigital
