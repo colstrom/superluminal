@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "superluminal"
   gem.homepage = "http://github.com/colstrom/superluminal"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Picking up where Ansible falls down.}
+  gem.description = %Q{Fills in some gaps in Ansible's functionality. Handles creation of IAM Roles, S3 Buckets, and VPC Peering.}
   gem.email = "chris@olstrom.com"
   gem.authors = ["Chris Olstrom"]
   # dependencies defined in Gemfile
