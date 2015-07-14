@@ -11,7 +11,7 @@ class Settings < Settingslogic
   end
 
   load!
-  rescue Errno::ENOENT
-    Announce.failure "Unable to locate configuration in #{ config_paths }."
-    exit
+rescue Errno::ENOENT
+  Announce.failure "Unable to locate configuration in #{ config_paths }."
+  abort
 end
