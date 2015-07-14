@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'commander'
-require_relative '../lib/superluminal'
+require 'superluminal'
 
 Commander.configure do
   program :name, 'Superluminal'
