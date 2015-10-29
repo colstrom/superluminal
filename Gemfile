@@ -5,6 +5,7 @@ source "https://rubygems.org"
 
 gem 'aws-sdk'
 gem 'commander'
+gem 'multi_json'
 gem 'settingslogic'
 gem 'terminal-announce'
 
