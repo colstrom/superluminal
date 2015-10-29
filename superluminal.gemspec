@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Chris Olstrom"]
-  s.date = "2015-07-14"
+  s.date = "2015-10-29"
   s.description = "Fills in some gaps in Ansible's functionality. Handles creation of IAM Roles, S3 Buckets, and VPC Peering."
   s.email = "chris@olstrom.com"
   s.executables = ["superluminal"]
@@ -39,11 +39,12 @@ Gem::Specification.new do |s|
     "lib/superluminal/settings.rb",
     "lib/superluminal/vpc.rb",
     "spec/spec_helper.rb",
-    "spec/superluminal_spec.rb"
+    "spec/superluminal_spec.rb",
+    "superluminal.gemspec"
   ]
   s.homepage = "http://github.com/colstrom/superluminal"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.4.8"
+  s.rubygems_version = "2.4.5.1"
   s.summary = "Picking up where Ansible falls down."
   s.test_files = ["spec/spec_helper.rb", "spec/superluminal_spec.rb"]
 
@@ -53,6 +54,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<aws-sdk>, [">= 0"])
       s.add_runtime_dependency(%q<commander>, [">= 0"])
+      s.add_runtime_dependency(%q<multi_json>, [">= 0"])
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<terminal-announce>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
@@ -66,6 +68,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<aws-sdk>, [">= 0"])
       s.add_dependency(%q<commander>, [">= 0"])
+      s.add_dependency(%q<multi_json>, [">= 0"])
       s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<terminal-announce>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
@@ -80,6 +83,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<aws-sdk>, [">= 0"])
     s.add_dependency(%q<commander>, [">= 0"])
+    s.add_dependency(%q<multi_json>, [">= 0"])
     s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<terminal-announce>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
