@@ -7,7 +7,7 @@ gem 'settingslogic', '~> 2.0'
 gem 'terminal-announce', '~> 1.0'
 
 group :development do
-  gem 'rspec', '~> 3.4.0'
+  gem 'rspec', '~> 3.4'
   gem 'yard', '~> 0.7'
   gem 'rdoc', '~> 4.2'
   gem 'bundler', '~> 1.0'
