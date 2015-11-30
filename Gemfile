@@ -12,7 +12,7 @@ group :development do
   gem 'rdoc', '~> 4.2'
   gem 'bundler', '~> 1.0'
   gem 'jeweler', '~> 2.0'
-  gem 'simplecov', '>= 0.11'
+  gem 'simplecov', '~> 0.11'
   gem 'reek', '~> 3.7'
   gem 'roodi', '~> 5.0'
 end
