@@ -62,7 +62,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rdoc>, ["~> 4.2"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 2.0"])
-      s.add_development_dependency(%q<simplecov>, [">= 0.11"])
+      s.add_development_dependency(%q<simplecov>, ["~> 0.11"])
       s.add_development_dependency(%q<reek>, ["~> 3.7"])
       s.add_development_dependency(%q<roodi>, ["~> 5.0"])
     else
@@ -76,7 +76,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rdoc>, ["~> 4.2"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
       s.add_dependency(%q<jeweler>, ["~> 2.0"])
-      s.add_dependency(%q<simplecov>, [">= 0.11"])
+      s.add_dependency(%q<simplecov>, ["~> 0.11"])
       s.add_dependency(%q<reek>, ["~> 3.7"])
       s.add_dependency(%q<roodi>, ["~> 5.0"])
     end
@@ -91,7 +91,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rdoc>, ["~> 4.2"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])
     s.add_dependency(%q<jeweler>, ["~> 2.0"])
-    s.add_dependency(%q<simplecov>, [">= 0.11"])
+    s.add_dependency(%q<simplecov>, ["~> 0.11"])
     s.add_dependency(%q<reek>, ["~> 3.7"])
     s.add_dependency(%q<roodi>, ["~> 5.0"])
   end
