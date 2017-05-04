@@ -1,6 +1,6 @@
 ---
-template_path: ./templates
-default_region: us-west-2
+template_path: /etc/superluminal/templates
+default_region: <%= ENV.fetch 'AWS_DEFAULT_REGION', 'us-west-1' %>
 environments:
   -
     name: development
@@ -12,4 +12,4 @@ environments:
     name: production
     region: us-east-1
 s3:
-  namespace: telusdigital
+  namespace: <%= ENV.fetch 'S3_NAMESPACE' %>
